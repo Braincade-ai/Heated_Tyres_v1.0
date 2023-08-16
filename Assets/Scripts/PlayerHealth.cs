@@ -27,10 +27,10 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "roadedge")
+        if (collision.gameObject.tag == "track")
         {
             Debug.Log("Collided with road edge");
-            TakeDamage(10);
+            TakeDamage(20);
         }
     }
 }

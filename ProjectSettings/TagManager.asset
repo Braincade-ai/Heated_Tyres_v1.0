@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - roadedge
+  - track
+  - win
   layers:
   - Default
   - TransparentFX
