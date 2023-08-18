@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public void RestartGame()
     {
         if (playerController.won)
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         else
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
