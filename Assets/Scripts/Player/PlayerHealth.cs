@@ -20,7 +20,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void Update()
     {
-        if (health == 0)
+        if (health <= 0)
         {
             gameManager.GameOver();
         }
@@ -31,6 +31,15 @@ public class PlayerHealth : MonoBehaviour
         {
             Debug.Log("Collided with road edge");
             TakeDamage(20);
+        }
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "track")
+        {
+            Debug.Log("Collided with road edge");
+            TakeDamage(0.5f);
         }
     }
 }
